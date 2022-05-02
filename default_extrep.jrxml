@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.12.2.final using JasperReports Library version 6.12.2-75c5e90a222ab406e416cbf590a5397028a52de3  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="default_extrep" pageWidth="1500" pageHeight="600" orientation="Landscape" columnWidth="1460" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" resourceBundle="ApplicationResources" uuid="9480fafb-37ca-4f83-80ab-c83ece991ebd">
+	<property name="net.sf.jasperreports.data.adapter" value="DataAdapter.xml"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.xml"/>
+	<property name="net.sf.jasperreports.export.xls.remove.empty.space.between.columns" value="true"/>
+	<property name="net.sf.jasperreports.export.xls.remove.empty.space.between.rows" value="true"/>
+	<property name="net.sf.jasperreports.export.xls.detect.cell.type" value="true"/>
+	<property name="net.sf.jasperreports.export.xls.font.size.fix.enabled" value="false"/>
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<style name="default" isDefault="true" forecolor="#22211F" backcolor="#FFFFFF" hTextAlign="Left" vTextAlign="Middle" pattern="#,##0.00" fontSize="9">
+		<box leftPadding="3" rightPadding="3"/>
+	</style>
+	<style name="columnHeader" style="default" mode="Opaque" forecolor="#FFFFFF" backcolor="#22211F" hTextAlign="Center" vTextAlign="Middle" isBold="true">
+		<box>
+			<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#0ED8B8"/>
+			<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#0ED8B8"/>
+			<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#0ED8B8"/>
+			<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#0ED8B8"/>
+		</box>
+	</style>
+	<style name="amount" style="default" hTextAlign="Right"/>
+	<style name="title" style="default" hTextAlign="Center" fontSize="16" isBold="true"/>
+	<style name="total" style="default" isBold="true">
+		<box>
+			<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#0ED8B8"/>
+			<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#0ED8B8"/>
+			<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#0ED8B8"/>
+			<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#0ED8B8"/>
+		</box>
+	</style>
+	<style name="totalCenter" style="total" hTextAlign="Center" isBold="true"/>
+	<style name="totalAmount" style="total" hTextAlign="Right" isBold="true"/>
+	<style name="headerLabel" style="default" isBold="true"/>
+	<style name="headerValue" style="default"/>
+	<style name="cell" style="default">
+		<box>
+			<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#0ED8B8"/>
+			<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#0ED8B8"/>
+			<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#0ED8B8"/>
+			<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#0ED8B8"/>
+		</box>
+	</style>
+	<style name="cell_top_filler" style="default">
+		<box>
+			<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#0ED8B8"/>
+		</box>
+	</style>
+	<style name="cell_right_filler" style="default">
+		<box>
+			<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#0ED8B8"/>
+		</box>
+	</style>
+	<style name="cell_left_filler" style="default">
+		<box>
+			<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#0ED8B8"/>
+		</box>
+	</style>
+	<style name="cell_left_right_filler" style="default">
+		<box>
+			<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#0ED8B8"/>
+			<rightPen lineWidth="0.5" lineColor="#0ED8B8"/>
+		</box>
+	</style>
+	<style name="cell_amount" style="cell" hTextAlign="Right"/>
+	<style name="group1Header" style="headerLabel" mode="Opaque" forecolor="#22211F" backcolor="#0ED8B8">
+		<box>
+			<topPen lineWidth="0.5"/>
+			<leftPen lineWidth="0.5"/>
+			<rightPen lineWidth="0.5"/>
+		</box>
+	</style>
+	<style name="group1HeaderRight" style="group1Header" hTextAlign="Right"/>
+	<style name="group1HeaderBottomBorder" style="group1Header">
+		<box>
+			<bottomPen lineWidth="0.5"/>
+		</box>
+	</style>
+	<style name="group1Footer" style="headerLabel" mode="Opaque" forecolor="#22211F" backcolor="#CCCCCC">
+		<box>
+			<topPen lineWidth="0.0"/>
+			<leftPen lineWidth="0.0"/>
+			<bottomPen lineWidth="0.0"/>
+			<rightPen lineWidth="0.0"/>
+		</box>
+	</style>
+	<style name="group2Header" style="headerLabel" mode="Opaque" forecolor="#22211F" backcolor="#0ED8B8">
+		<box>
+			<topPen lineWidth="0.5"/>
+			<leftPen lineWidth="0.5"/>
+			<rightPen lineWidth="0.5"/>
+		</box>
+	</style>
+	<style name="group2HeaderRight" style="group2Header" hTextAlign="Right"/>
+	<style name="nodata" style="default" mode="Opaque" forecolor="#FFFFFF" backcolor="#E3395E" hTextAlign="Center" vTextAlign="Middle" fontSize="16" isBold="true"/>
+	<style name="detail_style" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<rightPen lineWidth="0.5" lineColor="#0ED8B8"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$F{HEADER}.contains("DETAIL")]]></conditionExpression>
+			<style mode="Opaque" forecolor="#000000" backcolor="#F0F0F0"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="csv">
+		<![CDATA[]]>
+	</queryString>
+	<field name="HEADER" class="java.lang.String"/>
+	<field name="BOLD/" class="java.lang.String"/>
+	<field name="ISIN" class="java.lang.String"/>
+	<field name="Libelle" class="java.lang.String"/>
+	<field name="Statut/" class="java.lang.String"/>
+	<field name="Difference/" class="java.lang.String"/>
+	<field name="Nombre de jour/" class="java.lang.String"/>
+	<field name="Date/" class="java.lang.String"/>
+	<field name="Expression Quantite" class="java.lang.String"/>
+	<field name="Devise" class="java.lang.String"/>
+	<field name="Commentaire" class="java.lang.String"/>
+	<variable name="PTF" class="java.lang.String">
+		<variableExpression><![CDATA[$F{ISIN}.contains( "Portefeuille" ) ? $F{ISIN}.replace("Portefeuille: ","") : null]]></variableExpression>
+	</variable>
+	<variable name="PTF_2" class="java.lang.String">
+		<variableExpression><![CDATA[!$F{Libelle}.contains("$31$") ? $F{Libelle} : null]]></variableExpression>
+	</variable>
+	<variable name="PTF_3" class="java.lang.String">
+		<variableExpression><![CDATA[$F{Statut/}.contains("$COMPTE:") ? $F{Statut/}.replace("$COMPTE:","") : null]]></variableExpression>
+	</variable>
+	<variable name="RECON_DATE" class="java.lang.String">
+		<variableExpression><![CDATA[$F{ISIN}.contains("Reconciliation")? $F{ISIN}.replace( "Reconciliation en date du ", "" ) : null]]></variableExpression>
+	</variable>
+	<variable name="COMPTE" class="java.lang.String">
+		<variableExpression><![CDATA[$F{ISIN}.contains( "Compte:" ) ? $F{ISIN}.trim().replace( "Compte:","") : null]]></variableExpression>
+	</variable>
+	<variable name="SOURCE" class="java.lang.String">
+		<variableExpression><![CDATA[$V{COMPTE} != null ? $F{Libelle} : null]]></variableExpression>
+	</variable>
+	<variable name="RECON_MAN" class="java.lang.String">
+		<variableExpression><![CDATA[$F{ISIN}.trim().contains("Reconcilie manuellement:") ? $F{ISIN}.trim().replace("Reconcilie manuellement:","") : null]]></variableExpression>
+	</variable>
+	<variable name="RECON_AUTO" class="java.lang.String">
+		<variableExpression><![CDATA[$F{ISIN}.trim().contains("Reconcilie automatiquement:") ? $F{ISIN}.trim().replace("Reconcilie automatiquement:","") : null]]></variableExpression>
+	</variable>
+	<variable name="RECON_VU" class="java.lang.String">
+		<variableExpression><![CDATA[$F{ISIN}.contains("Vu") ? $F{ISIN}.trim().replace("Vu:","") : null]]></variableExpression>
+	</variable>
+	<variable name="VALIDATION_DATE" class="java.lang.String">
+		<variableExpression><![CDATA[$F{ISIN}.contains( "Valide" ) ? $F{ISIN}.replace("Valide le ",""): null]]></variableExpression>
+	</variable>
+	<variable name="IS_MAN_RECON" class="java.lang.String">
+		<variableExpression><![CDATA[$F{HEADER}.contains("GROUP_HEADING") && $F{Libelle}.contains("Reconcilie automatiquement") ? $R{label.recon_man} : null]]></variableExpression>
+	</variable>
+	<variable name="IS_AUTO_RECON" class="java.lang.String">
+		<variableExpression><![CDATA[$F{HEADER}.contains("GROUP_HEADING") && $F{Libelle}.contains("Reconcile manuellement") ? $R{label.recon_auto} : null]]></variableExpression>
+	</variable>
+	<variable name="IS_VU_RECON" class="java.lang.String">
+		<variableExpression><![CDATA[$F{HEADER}.contains("GROUP_HEADING") && $F{Libelle}.contains("Vu") ? $R{label.seen}: null]]></variableExpression>
+	</variable>
+	<variable name="NON_APP" class="java.lang.String">
+		<variableExpression><![CDATA[$F{ISIN}.contains("Non appareille") ? $F{ISIN}.toString().split("&")[0].replace("Non appareille:","") : null]]></variableExpression>
+	</variable>
+	<variable name="NON_RECON" class="java.lang.String">
+		<variableExpression><![CDATA[$F{ISIN}.contains("Non appareille") ? $F{ISIN}.toString().split("&")[1].replace("Non reconcilie:","") : null]]></variableExpression>
+	</variable>
+	<variable name="NON_APP_RECON" class="java.lang.String">
+		<variableExpression><![CDATA[$F{ISIN}.contains("Non appareille") ? $F{ISIN}.replace("Non appareille",$R{label.non_app}).replace("Non reconcilie",$R{label.non_recon}) : null]]></variableExpression>
+	</variable>
+	<group name="PORTFOLLIO">
+		<groupExpression><![CDATA[$F{ISIN}.contains("Portefeuille")]]></groupExpression>
+		<groupHeader>
+			<band height="20">
+				<property name="net.sf.jasperreports.export.xls.break.before.row" value="true"/>
+				<printWhenExpression><![CDATA[$F{ISIN}.contains("Portefeuille") && !($V{PAGE_NUMBER} == 1)]]></printWhenExpression>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="33">
+				<staticText>
+					<reportElement stretchType="ContainerBottom" x="0" y="10" width="1200" height="3" isRemoveLineWhenBlank="true" uuid="09eb0120-6c13-4a29-8432-9e922c3d1aee">
+						<propertyExpression name="net.sf.jasperreports.export.xls.sheet.name"><![CDATA[$V{PTF}]]></propertyExpression>
+					</reportElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+				<textField>
+					<reportElement style="cell_top_filler" x="0" y="0" width="1460" height="10" uuid="b7ab05f4-b0dc-4845-941b-0bf3628c6541">
+						<printWhenExpression><![CDATA[!$F{ISIN}.contains("Portefeuille") && !($V{PAGE_NUMBER} == 1)]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="0.5"/>
+					</box>
+					<textFieldExpression><![CDATA[""]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupFooter>
+	</group>
+	<group name="COMPTE">
+		<groupExpression><![CDATA[$V{COMPTE}]]></groupExpression>
+		<groupHeader>
+			<band height="50">
+				<staticText>
+					<reportElement x="20" y="11" width="190" height="20" isRemoveLineWhenBlank="true" uuid="933ff2a5-ab28-438c-98c0-5fb815c9a7e1">
+						<property name="net.sf.jasperreports.export.xls.break.before.row" value="true"/>
+						<printWhenExpression><![CDATA[$F{ISIN}.contains("Portefeuille") && !($V{PAGE_NUMBER} == 1)]]></printWhenExpression>
+					</reportElement>
+					<text><![CDATA[]]></text>
+				</staticText>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="50"/>
+		</groupFooter>
+	</group>
+	<title>
+		<band height="30">
+			<textField>
+				<reportElement style="title" x="0" y="0" width="1210" height="30" isRemoveLineWhenBlank="true" printWhenGroupChanges="PORTFOLLIO" uuid="53883d8c-ed7d-479f-a5c0-a71cd9733d30"/>
+				<textFieldExpression><![CDATA[$R{label.title}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="160">
+			<textField>
+				<reportElement x="0" y="21" width="230" height="20" isRemoveLineWhenBlank="true" uuid="7467c625-5c63-4ca1-a817-b4030984a9d4">
+					<printWhenExpression><![CDATA[$V{RECON_DATE} != null]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{label.recon_date} + ":"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="21" width="190" height="20" isRemoveLineWhenBlank="true" uuid="2a4ea418-dca7-4fa5-ba90-a2db40ebfbe7">
+					<printWhenExpression><![CDATA[$V{RECON_DATE} != null]]></printWhenExpression>
+				</reportElement>
+				<textFieldExpression><![CDATA[$V{RECON_DATE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="41" width="230" height="20" isRemoveLineWhenBlank="true" uuid="d61294a4-2b41-4cc8-b0e2-32dbae050e92">
+					<printWhenExpression><![CDATA[$V{COMPTE} != null]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{label.account} + ":"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="41" width="190" height="20" isRemoveLineWhenBlank="true" uuid="009c6baf-4063-436e-ad29-708b4c5a9e89">
+					<printWhenExpression><![CDATA[$V{COMPTE} != null]]></printWhenExpression>
+				</reportElement>
+				<textFieldExpression><![CDATA[$V{COMPTE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="ElementGroupHeight" x="230" y="61" width="190" height="20" isRemoveLineWhenBlank="true" uuid="d8bead10-4c36-46bd-9879-0f27f2330d9f">
+					<printWhenExpression><![CDATA[$V{RECON_AUTO} != null]]></printWhenExpression>
+				</reportElement>
+				<textFieldExpression><![CDATA[$V{RECON_AUTO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="ElementGroupHeight" x="230" y="81" width="190" height="20" isRemoveLineWhenBlank="true" uuid="421a16ec-fadf-4e6d-825e-2a3928948c30">
+					<printWhenExpression><![CDATA[$V{RECON_MAN} != null]]></printWhenExpression>
+				</reportElement>
+				<textFieldExpression><![CDATA[$V{RECON_MAN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="ElementGroupHeight" x="0" y="81" width="230" height="20" isRemoveLineWhenBlank="true" uuid="fbadf348-551a-40b8-8759-52387ea01563">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<printWhenExpression><![CDATA[$V{RECON_MAN} != null]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Réconcillié manuellement" + " : "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="ElementGroupHeight" x="230" y="121" width="250" height="20" isRemoveLineWhenBlank="true" uuid="d003b333-8c2e-4770-a297-55656353af34">
+					<printWhenExpression><![CDATA[$V{VALIDATION_DATE} != null]]></printWhenExpression>
+				</reportElement>
+				<textFieldExpression><![CDATA[$V{VALIDATION_DATE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="ElementGroupHeight" x="230" y="101" width="190" height="20" isRemoveLineWhenBlank="true" uuid="bcb6ae0c-5bc5-4121-bc43-be083f6c06f8">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<printWhenExpression><![CDATA[$V{RECON_VU} != null]]></printWhenExpression>
+				</reportElement>
+				<textFieldExpression><![CDATA[$V{RECON_VU}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="ElementGroupHeight" x="0" y="101" width="230" height="20" isRemoveLineWhenBlank="true" uuid="846cf5ca-09e8-4803-a304-472340373550">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<printWhenExpression><![CDATA[$V{RECON_VU} != null]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{label.seen} + " : "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="ElementGroupHeight" x="0" y="121" width="230" height="20" isRemoveLineWhenBlank="true" uuid="416b9649-c4c9-4038-9d63-142892b92142">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<printWhenExpression><![CDATA[$V{VALIDATION_DATE} != null]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{label.validation} + " : "]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="ElementGroupHeight" x="0" y="61" width="230" height="20" isRemoveLineWhenBlank="true" uuid="2b3741f1-84e3-4726-8e46-a43ca50cb242">
+					<printWhenExpression><![CDATA[$V{RECON_AUTO} != null]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{label.recon_auto} + ":"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="230" height="21" isRemoveLineWhenBlank="true" uuid="590c0e85-bf3f-4dca-96af-bdfbd450e628">
+					<printWhenExpression><![CDATA[$V{PTF} != null]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{label.ptf} + ":"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="0" width="190" height="21" isRemoveLineWhenBlank="true" uuid="0f1dd605-ec73-4907-81bc-aa9096816c0a">
+					<printWhenExpression><![CDATA[$V{PTF} != null]]></printWhenExpression>
+				</reportElement>
+				<textFieldExpression><![CDATA[$V{PTF}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement stretchType="ElementGroupHeight" x="0" y="141" width="400" height="19" isRemoveLineWhenBlank="true" uuid="01ac48b8-165e-4174-935f-08688cc2e455">
+					<printWhenExpression><![CDATA[$V{NON_APP_RECON} != null]]></printWhenExpression>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{NON_APP_RECON}]]></textFieldExpression>
+			</textField>
+		</band>
+		<band height="120">
+			<printWhenExpression><![CDATA[$F{HEADER}.contains("DETAIL") || $F{HEADER}.contains("GLOBAL") || $F{HEADER}.contains("GROUP_HEADING")]]></printWhenExpression>
+			<textField>
+				<reportElement style="columnHeader" isPrintRepeatedValues="false" x="700" y="0" width="110" height="30" isRemoveLineWhenBlank="true" printWhenGroupChanges="PORTFOLLIO" uuid="6c81656a-31c6-42e2-b9e1-9d67999fc159">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$R{label.Nombredejour/}+" /\n"+$R{label.contrat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="columnHeader" isPrintRepeatedValues="false" x="910" y="0" width="70" height="30" isRemoveLineWhenBlank="true" printWhenGroupChanges="PORTFOLLIO" uuid="027636f5-e364-4a85-8d72-e045536160aa"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$R{label.ExpressionQuantite}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="columnHeader" isPrintRepeatedValues="false" x="600" y="0" width="100" height="30" isRemoveLineWhenBlank="true" printWhenGroupChanges="PORTFOLLIO" uuid="76383ab2-7c98-41ec-807d-27854e70dc2c"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$R{label.Difference/}+" /\n"+$R{label.qte}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="columnHeader" isPrintRepeatedValues="false" x="220" y="0" width="220" height="30" isRemoveLineWhenBlank="true" printWhenGroupChanges="PORTFOLLIO" uuid="d6a9df3d-f0c7-47cd-8e80-d55a503a65d6">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$R{label.Libelle}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="columnHeader" isPrintRepeatedValues="false" x="440" y="0" width="160" height="30" isRemoveLineWhenBlank="true" printWhenGroupChanges="PORTFOLLIO" uuid="09501fca-c3ec-437a-a3bf-9f7b9ce0007d">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$R{label.Statut/} +" /\n"+$R{label.source}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="columnHeader" isPrintRepeatedValues="false" x="810" y="0" width="100" height="30" isRemoveLineWhenBlank="true" printWhenGroupChanges="PORTFOLLIO" uuid="eb1fc60f-64c1-470c-940c-b8088902bab1">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$R{label.Date/}+" /\n"+$R{label.Statut/}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="columnHeader" isPrintRepeatedValues="false" x="0" y="0" width="220" height="30" isRemoveLineWhenBlank="true" printWhenGroupChanges="PORTFOLLIO" uuid="a3c2264d-f6ea-4280-b202-56b3cd72b95e">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$R{label.ISIN}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="columnHeader" isPrintRepeatedValues="false" x="980" y="0" width="70" height="30" isRemoveLineWhenBlank="true" printWhenGroupChanges="PORTFOLLIO" uuid="56cd7133-97af-474f-8a06-6db43af46b52"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$R{label.Devise}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="columnHeader" isPrintRepeatedValues="false" x="1050" y="0" width="410" height="30" isRemoveLineWhenBlank="true" printWhenGroupChanges="PORTFOLLIO" uuid="d43ba2c0-1e3a-4827-8562-528373491cac"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression><![CDATA[$R{label.Commentaire}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" style="group1HeaderBottomBorder" isPrintRepeatedValues="false" x="0" y="30" width="1460" height="20" backcolor="#0ED8B8" uuid="7b636f50-cb47-47fa-89b5-c5a94376fab1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[$V{IS_MAN_RECON} != null]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#0ED8B8"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{IS_MAN_RECON}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="detail_style" x="0" y="90" width="220" height="15" uuid="b5848430-b8b9-4117-98a3-a4e694047e11">
+					<printWhenExpression><![CDATA[$F{HEADER}.contains("DETAIL")]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#0ED8B8"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#0ED8B8"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ISIN}.replace("$31$C","")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="detail_style" x="220" y="90" width="220" height="15" uuid="9b45839c-dafa-4cf7-9139-0a6f519c71f8">
+					<printWhenExpression><![CDATA[$F{HEADER}.contains("DETAIL")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Libelle}.replace("$31$C","")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="detail_style" x="440" y="90" width="160" height="15" uuid="302ef6a5-7cf7-4fcc-93dd-a5cac666704e">
+					<printWhenExpression><![CDATA[$F{HEADER}.contains("DETAIL")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="8" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Statut/}.trim().contains("Reconcilie automatiquement") ? $R{label.recon_auto} : $F{Statut/}.trim().contains("TITRES") ? $R{label.titre}.toUpperCase() : $F{Statut/}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###">
+				<reportElement style="detail_style" x="600" y="90" width="100" height="15" uuid="62d57714-c56e-4d36-9624-823ed5e897fc">
+					<printWhenExpression><![CDATA[$F{HEADER}.contains("DETAIL")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Difference/}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="detail_style" x="700" y="90" width="110" height="15" uuid="b86ae5b2-1b26-46fd-9fb5-458397a6f581">
+					<printWhenExpression><![CDATA[$F{HEADER}.contains("DETAIL")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Nombre de jour/}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="detail_style" x="810" y="90" width="100" height="15" uuid="13d22e6e-1778-4a56-a45c-9d3a2ffb1cae">
+					<printWhenExpression><![CDATA[$F{HEADER}.contains("DETAIL")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Date/}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="detail_style" x="910" y="90" width="70" height="15" uuid="59633929-5b8d-4d58-8370-f77e18257b98">
+					<printWhenExpression><![CDATA[$F{HEADER}.contains("DETAIL")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Expression Quantite}.substring( 0, 1 ).toUpperCase() + $F{Expression Quantite}.substring( 1, $F{Expression Quantite}.length() )]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="detail_style" x="980" y="90" width="70" height="15" uuid="1e608f87-a76b-41e4-85be-fdc1e3860761">
+					<printWhenExpression><![CDATA[$F{HEADER}.contains("DETAIL")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Devise}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="detail_style" x="1050" y="90" width="410" height="15" uuid="73afbc4c-0f82-4ad2-af2a-4705fc6a24d4">
+					<printWhenExpression><![CDATA[$F{HEADER}.contains("DETAIL")]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<rightPen lineWidth="0.5" lineColor="#0ED8B8"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Commentaire}.replace("$60$C","")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="detail_style" x="440" y="105" width="160" height="15" uuid="59b21412-9b0e-4fa3-b5a5-1e2f4d1b7499">
+					<printWhenExpression><![CDATA[$F{HEADER}.contains("GLOBAL")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Statut/}.trim().contains("Reconcilie automatiquement") ? $R{label.recon_auto} : $F{Statut/}.trim().contains("TITRES") ? $R{label.titre}.toUpperCase() : $F{Statut/}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="detail_style" x="1050" y="105" width="410" height="15" uuid="6a9df26a-48c4-4ee1-9971-5b833edf56ab">
+					<printWhenExpression><![CDATA[$F{HEADER}.contains("GLOBAL")]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<rightPen lineWidth="0.5" lineColor="#0ED8B8"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Commentaire}.replace("$60$C","")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="detail_style" x="700" y="105" width="110" height="15" uuid="270f9bf9-eacb-49c8-a0fc-141eb7f4a30d">
+					<printWhenExpression><![CDATA[$F{HEADER}.contains("GLOBAL")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Nombre de jour/}]]></textFieldExpression>
+			</textField>
+			<textField pattern="#,##0.###">
+				<reportElement style="detail_style" x="600" y="105" width="100" height="15" uuid="afea0697-3215-409b-85e8-072987c68c03">
+					<printWhenExpression><![CDATA[$F{HEADER}.contains("GLOBAL")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Right">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Difference/}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="detail_style" x="220" y="105" width="220" height="15" uuid="a45af13d-0a43-4c52-b146-2270e7c84658">
+					<printWhenExpression><![CDATA[$F{HEADER}.contains("GLOBAL")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Left">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Libelle}.replace("$31$C","")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="detail_style" x="810" y="105" width="100" height="15" uuid="a6c65d5a-3dcb-47e4-938e-ff296093daca">
+					<printWhenExpression><![CDATA[$F{HEADER}.contains("GLOBAL")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Date/}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="detail_style" x="910" y="105" width="70" height="15" uuid="78bad1d8-abaf-42ca-976d-d3246f5b4278">
+					<printWhenExpression><![CDATA[$F{HEADER}.contains("GLOBAL")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Expression Quantite}.length() > 0 ? $F{Expression Quantite}.substring( 0, 1 ).toUpperCase() + $F{Expression Quantite}.substring( 1, $F{Expression Quantite}.length() ) : new String("")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="detail_style" x="0" y="105" width="220" height="15" uuid="fa4a4c89-cf45-473d-a406-3b184f0b7215">
+					<printWhenExpression><![CDATA[$F{HEADER}.contains("GLOBAL")]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#0ED8B8"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#0ED8B8"/>
+				</box>
+				<textElement textAlignment="Left">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{ISIN}.replace("$31$C","")]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="detail_style" x="980" y="105" width="70" height="15" uuid="e94fa6b8-c5fd-4ce0-8261-9ccb0daa91a3">
+					<printWhenExpression><![CDATA[$F{HEADER}.contains("GLOBAL")]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center">
+					<font size="8" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Devise}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" style="group1HeaderBottomBorder" isPrintRepeatedValues="false" x="0" y="50" width="1460" height="20" backcolor="#0ED8B8" uuid="cf27d974-d062-4d58-bfc8-be67a225fa08">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[$V{IS_AUTO_RECON} != null]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#0ED8B8"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{IS_AUTO_RECON}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement key="" style="group1HeaderBottomBorder" isPrintRepeatedValues="false" x="0" y="70" width="1460" height="20" backcolor="#0ED8B8" uuid="9162a9e5-7b08-4bea-8006-c5978e5fad2c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[$V{IS_VU_RECON} != null]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#0ED8B8"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{IS_VU_RECON}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<noData>
+		<band height="50">
+			<textField>
+				<reportElement style="nodata" x="0" y="0" width="1210" height="50" uuid="ef5b7b8c-9fad-439a-8e8b-ed1c24c66ea6"/>
+				<textFieldExpression><![CDATA[$R{label.nodata}]]></textFieldExpression>
+			</textField>
+		</band>
+	</noData>
+</jasperReport>

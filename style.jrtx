@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio -->
+<jasperTemplate xmlns="http://jasperreports.sourceforge.net/jasperreports/template" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/template http://jasperreports.sourceforge.net/xsd/jaspertemplate.xsd">
+	<style name="default" isDefault="true" forecolor="#22211F" backcolor="#FFFFFF" hTextAlign="Left" vTextAlign="Middle" pattern="#,##0.00" fontSize="9">
+		<box leftPadding="3" rightPadding="3"/>
+	</style>
+	<style name="columnHeader" style="default" mode="Opaque" forecolor="#FFFFFF" backcolor="#22211F" hTextAlign="Center" vTextAlign="Middle" isBold="true">
+		<box>
+			<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#0ED8B8"/>
+			<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#0ED8B8"/>
+			<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#0ED8B8"/>
+			<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#0ED8B8"/>
+		</box>
+	</style>
+	<style name="amount" style="default" hTextAlign="Right"/>
+	<style name="title" style="default" hTextAlign="Center" fontSize="16" isBold="true"/>
+	<style name="total" style="default" isBold="true">
+		<box>
+			<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#0ED8B8"/>
+			<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#0ED8B8"/>
+			<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#0ED8B8"/>
+			<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#0ED8B8"/>
+		</box>
+	</style>
+	<style name="totalCenter" style="total" hTextAlign="Center" isBold="true"/>
+	<style name="totalAmount" style="total" hTextAlign="Right" isBold="true"/>
+	<style name="headerLabel" style="default" isBold="true"/>
+	<style name="headerValue" style="default"/>
+	<style name="cell" style="default">
+		<box>
+			<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#0ED8B8"/>
+			<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#0ED8B8"/>
+			<bottomPen lineWidth="0.0" lineStyle="Solid" lineColor="#0ED8B8"/>
+			<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#0ED8B8"/>
+		</box>
+	</style>
+	<style name="cell_top_filler" style="default">
+		<box>
+			<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#0ED8B8"/>
+		</box>
+	</style>
+	<style name="cell_right_filler" style="default">
+		<box>
+			<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#0ED8B8"/>
+		</box>
+	</style>
+	<style name="cell_left_filler" style="default">
+		<box>
+			<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#0ED8B8"/>
+		</box>
+	</style>
+	<style name="cell_left_right_filler" style="default">
+		<box>
+			<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#0ED8B8"/>
+			<rightPen lineWidth="0.5" lineColor="#0ED8B8"/>
+		</box>
+	</style>
+	<style name="cell_amount" style="cell" hTextAlign="Right"/>
+	<style name="group1Header" style="headerLabel" mode="Opaque" forecolor="#22211F" backcolor="#0ED8B8">
+		<box>
+			<topPen lineWidth="0.5"/>
+			<leftPen lineWidth="0.5"/>
+			<rightPen lineWidth="0.5"/>
+		</box>
+	</style>
+	<style name="group1HeaderRight" style="group1Header" hTextAlign="Right"/>
+	<style name="group1HeaderBottomBorder" style="group1Header">
+		<box>
+			<bottomPen lineWidth="0.5"/>
+		</box>
+	</style>
+	<style name="group1Footer" style="headerLabel" mode="Opaque" forecolor="#22211F" backcolor="#CCCCCC">
+		<box>
+			<topPen lineWidth="0.0"/>
+			<leftPen lineWidth="0.0"/>
+			<bottomPen lineWidth="0.0"/>
+			<rightPen lineWidth="0.0"/>
+		</box>
+	</style>
+	<style name="group2Header" style="headerLabel" mode="Opaque" forecolor="#22211F" backcolor="#0ED8B8">
+		<box>
+			<topPen lineWidth="0.5"/>
+			<leftPen lineWidth="0.5"/>
+			<rightPen lineWidth="0.5"/>
+		</box>
+	</style>
+	<style name="group2HeaderRight" style="group2Header" hTextAlign="Right"/>
+	<style name="nodata" style="default" mode="Opaque" forecolor="#FFFFFF" backcolor="#E3395E" hTextAlign="Center" vTextAlign="Middle" fontSize="16" isBold="true"/>
+</jasperTemplate>
